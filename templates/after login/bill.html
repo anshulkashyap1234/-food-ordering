@@ -1,0 +1,231 @@
+<style>
+    .list_section_item {
+        margin-top: 10rem;
+
+
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .list_container_item {
+        position: relative;
+
+        border-radius: 5rem;
+        box-shadow: 2px 2px 20px black;
+        width: 1600px;
+
+        border: .5rem solid #f4432b;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 5rem;
+        padding: 30px 30px 10px 10px;
+
+    }
+
+    .list_innercontainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 2rem;
+        margin-top: 60px;
+    }
+
+    .list_header_item {
+        position: absolute;
+        top: 0%;
+        left: 39%;
+        font-size: 2rem;
+        color: #f4432b;
+        padding: 20px 20px 20px 20px;
+
+
+    }
+
+
+    .list_button {
+        font-size: 2rem;
+        border: 2px solid white;
+        background-color: inherit;
+        color: white;
+        padding: 6px 6px 4px 4px;
+        box-shadow: 2px 2px 4px 3px rgba(28, 16, 16, 0.874);
+        border-radius: 12px;
+
+    }
+
+    .list_button:hover {
+        border: 2px solid #f4432b;
+        background-color: white;
+        color: #f4432b;
+        cursor: pointer;
+
+    }
+
+    .price_container {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .old-price {
+        text-decoration: line-through;
+        font-size: 13px;
+
+    }
+
+    .new-price {
+        font-weight: 600;
+        font-size: 38px;
+
+    }
+
+    .list_area input {
+        display: none;
+    }
+   
+
+  
+
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+
+  }
+
+  table thead {
+    color: rgb(38, 93, 232);
+
+  }
+
+  table tbody {
+    color: rgba(5, 5, 5, 0.902);
+  }
+
+  thead th:nth-child(1) {
+    width: 30%;
+  }
+
+  thead th:nth-child(2) {
+    width: 25%;
+  }
+
+  thead th:nth-child(3) {
+    width: 25%;
+  }
+
+  thead th:nth-child(4) {
+    width: 20%;
+  }
+
+  th,
+  td {
+    padding: 20px;
+  }
+
+  .transaction {
+    scroll-behavior: auto;
+    width: auto;
+
+  }
+
+  .transaction {
+    margin: 5px;
+    padding: 5px;
+
+
+    overflow: auto;
+    text-align: justify;
+  }
+  .delete{
+    color: #f4432b;
+  }
+  .delete:hover{
+    cursor: pointer;
+    color: #f52f15;
+  }
+  .order{
+    width: 100px;
+    height: 39px;
+    border: 2px solid;
+    position: absolute;
+    bottom: 10%;
+    background-color: #f4432b;
+    color: aliceblue;
+    right: 10%;
+  }
+  .order:hover{
+    background-color: white;
+    color: #f4432b;
+    cursor: pointer;
+    border-color: #f4432b;
+  }
+</style>
+
+</head>
+
+<body>
+    <div>
+
+        {% include 'userpage.html'%}
+    </div>
+
+
+    {% block content%}
+    <div class="list_section_item">
+
+        <div class="list_container_item">
+            <div class="list_header_item">
+
+                <h2>bill table</h2>
+            </div>
+            <div class="transaction">
+                <form action="/delete" method="post">
+                <table>
+            
+                  <thead>
+                    <tr>
+                      
+                      <th scope="col">date</th>
+                      
+                      <th scope="col">item name</th>
+                      <th scope="col">price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {%for i in txn %}
+            
+                    <tr>
+                      <th scope="row">{{i[1]}} </th>
+                      <th>{{i[3]}}</th>
+                      <th>{{i[2]}}</th>
+                      <th>
+                        <button type="submit" value="{{i[1]}}" name="delete" class="delete">delete</button>
+                      </th>
+                     
+                    </tr>
+                    {%endfor%}
+            
+                  </tbody>
+                  <br><br>
+                  <tfoot>
+                    <tr>
+                      <th scope="row" colspan="4">Total amount - {{total}}</th>
+                      
+                    </tr>
+                  </tfoot>
+                </table>
+                <button class="order" >order now</button>
+            </form>
+              </div>
+        </div>
+    </div>
+    {%endblock%}
+</body>
+
+</html>

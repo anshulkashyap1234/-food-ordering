@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/rest.css')}}">
+</head>
+<body>
+    
+
+  <header class="header">
+    <a href="/" class="logo"><span class="header-name">Food</span> Delivery</a>
+
+
+
+    <input type="checkbox" name="" id="menu">
+    <nav class="navbar">
+
+      <div class="container1" style="--i:1">
+        <!-- Btn-->
+        <button class="btn"><span>menu</span><i class="material-icons"></i>
+          <ul class="dropdown">
+            <li class="active"><a href="#">Categery</a></li>
+            <li><a href="/loginbutton">login</a></li>
+            <li><a href="#">order <b></b></a></li>
+            <li><a href="#">Help</a></li>
+          
+          </ul>
+        </button>
+      </div>
+      <a href="#about" style="--i:2">Categore</a>
+      <a href="#education" style="--i:4">Shop</a>
+      <a href="#skills" style="--i:3">Blog</a>
+
+      <a href="#contact" style="--i:5">Contact</a>
+      <a href="/loginbutton" style="--i:5">login</a>
+    </nav>
+    <div class="input_container">
+
+      <input type="text" placeholder="search" class="input_text">
+      <input type="submit" name="" id="" value="🔍" class="input_submit">
+
+      <div class="order_container">
+
+      </div>
+    </div>
+
+  </header>
+    <div>
+        {% block content%}
+
+
+        {%endblock%}
+    </div>
+</body>
+</html>

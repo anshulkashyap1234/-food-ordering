@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='/css/rest.css')}}">
+    <style>
+        
+.profile-btn {  
+     
+     padding: 0;  
+     border: 0;  
+     background-color: transparent;  
+     display: flex;  
+     align-items: center;  
+     padding-left: 12px;  
+     border-left: 2px solid #ddd;  
+     margin-left: 10px;
+     margin-right: 0px;
+ }  
+ .profile-btn img {  
+     width: 32px;  
+     height: 32px;  
+     object-fit: cover;  
+     border-radius: 50%;  
+     margin-right: 4px;  
+ }  
+ .profile-btn span {  
+     color: var(--main-color);  
+     font-size: 16px;  
+       
+     font-weight: 700;  
+ }
+    </style>
+</head>
+<body>
+    
+
+  <header class="header">
+    <a href="/" class="logo"><span class="header-name">Food</span> Delivery</a>
+
+
+
+    <input type="checkbox" name="" id="menu">
+    <nav class="navbar">
+
+      <div class="container1" style="--i:1">
+        <!-- Btn-->
+        <button class="btn"><span>menu</span><i class="material-icons"></i>
+          <ul class="dropdown">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/items">order <b></b></a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="/logout">logout</a></li>
+          
+          </ul>
+        </button>
+      </div>
+      <a href="/items" style="--i:2">Categore</a>
+      <a href="/items" style="--i:4">Shop</a>
+      
+      <a href="/cart" style="--i:5;color: #f83e31;" >Cart[{{item_no}}]</a>
+
+      <a href="/logout">logout</a>
+            <a href="/profile">
+
+                <button class="profile-btn">
+                    <img src="{{url_for('static',filename='/img/Screenshot_20210923-213001_Gallery.jpg')}}" />
+                    <span>{{username}}</span>
+                </button>
+            </a>
+    </nav>
+    <div class="input_container">
+
+      <input type="text" placeholder="search" class="input_text">
+      <input type="submit" name="" id="" value="🔍" class="input_submit">
+
+      <div class="order_container">
+
+      </div>
+    </div>
+
+  </header>
+    <div>
+        {% block content%}
+
+
+        {%endblock%}
+    </div>
+</body>
+</html>

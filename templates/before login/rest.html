@@ -1,0 +1,315 @@
+
+
+
+<body>
+  <div>
+
+    {% include 'navbar.html'%}
+</div>
+
+{% block content%}
+
+  <section class="food_scrool section">
+    <div class="container">
+      <div class="slider">
+
+        <div class=" box">
+          <div class="details">
+            <h1>All you need for breakfast <br>
+              is here</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing <br>
+              elit. Integer lacinia dui lectus. Donec scelerisque ipsum <br>
+              diam, ac mattis orci pellentesque eget.
+            </p>
+            <div class="button_container">
+
+              <button class="buy_button">Buy Now</button>
+              <button class="see_button">See More</button>
+            </div>
+          </div>
+          <div class="bg" style="background-image: url({{url_for('static',filename = '/img/Screenshot_20230203_222204.png')}});"></div>
+
+        </div>
+        
+      </div>
+  </section>
+  <section>
+    <div class="food_item_container">
+      <div class="food_items">
+        <div class="item">
+          <h2>🍈</h2>
+          <p class="tag">Fruit</p>
+          <br>
+
+        </div>
+        <div class="item">
+          <h2 autocapitalize="">🍕</h2>
+          <p class="tag">Pizza</p>
+          <br>
+
+        </div>
+        <div class="item">
+          <h2 autocapitalize="">🍣</h2>
+          <p class="tag">food</p>
+          <br>
+
+        </div>
+        <div class="item">
+          <h2 autocapitalize="">🥞</h2>
+          <p class="tag">Sushi</p>
+          <br>
+
+        </div>
+        <div class="item">
+          <h2 autocapitalize="">🍖</h2>
+          <p class="tag">Meal</p>
+          <br>
+
+        </div>
+        <div class="item">
+          <h2 autocapitalize="">🍜</h2>
+          <p class="tag">Noddles</p>
+          <br>
+
+        </div>
+        <div class="item">
+          <h2 autocapitalize="">🍔</h2>
+          <p class="tag">Burger</p>
+          <br>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section>
+    <div class="food_card_countainer">
+      <div class="food_card_hearder">
+        <h2>--New proucts--</h2>
+      </div>
+      <div class="food_card">
+
+        <div class="food_card_item">
+          <div class="food_card_bg" style="background-image: url({{url_for('static',filename = '/img/Screenshot_20230203_222204.png')}});"></div>
+          <div class="food_card_title">
+            <h2 style="color: aliceblue;">Fresh vagitabel</h2>
+            <br>
+            <button class="food_card_button">Order Now</button>
+          </div>
+        </div>
+        <div class="food_card_item_bottom">
+
+          <div class="food_card_item">
+            <div class="food_card_bg"
+              style="background-image: url({{url_for('static',filename = '/img/top-view-pakistan-meal-composition-with-copy-space.jpg')}});"></div>
+            <div class="food_card_title">
+              <h2 style="color: aliceblue;">Fresh vagitabel</h2>
+              <br>
+              <button class="food_card_button">Order Now</button>
+            </div>
+          </div>
+          <div class="food_card_item">
+            <div class="food_card_bg" style="background-image: url({{url_for('static',filename = '/img/e594d337200536d04e08e6584a690275.jpeg')}});"></div>
+            <div class="food_card_title">
+              <h2 style="color: aliceblue;">Fresh vagitabel</h2>
+              <br>
+              <button class="food_card_button">Order Now</button>
+            </div>
+          </div>
+          <div class="food_card_item">
+            <div class="food_card_bg" style="background-image: url({{url_for('static',filename = '/img/images.jpg')}});" ></div>
+            <div class="food_card_title">
+              <h2 style="color: aliceblue;">Fresh vagitabel</h2>
+              <br>
+              <button class="food_card_button">Order Now</button>
+            </div>
+          </div>
+          <div class="food_card_item">
+            <div class="food_card_bg" style="background-image: url({{url_for('static',filename = '/img/photo-1567620905732-2d1ec7ab7445.jpg')}});"></div>
+            <div class="food_card_title">
+              <h2 style="color: aliceblue;">Fresh vagitabel</h2>
+              <br>
+              <button class="food_card_button">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="slider">
+
+        <div class=" box">
+          <div class="bg"
+            style="background-image: url({{url_for('static',filename = '/img/pizaa.png')}}););">
+          </div>
+          <div class="details">
+            <h1 style="margin-left: -150px;">Our Special Services<br>
+              is here</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing <br>
+              elit. Integer lacinia dui lectus. Donec scelerisque ipsum <br>
+              diam, ac mattis orci pellentesque eget.
+            </p>
+
+            <p style="margin-left: -430px">$20%00 $18.00</p>
+            <br>
+            <div class="button_container">
+
+
+              <button class="see_button">Shop Now</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+  </section>
+  <section>
+    <div class="list_section">
+      <div class="list_container">
+        <div class="list_header">
+
+          <h2>50% Discount Offers</h2>
+        </div>
+        <div class="list_innercontainer">
+
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <img src="{{url_for('static',filename='/img/e594d337200536d04e08e6584a690275.jpeg')}}">
+              </div>
+            </div>
+            <div class="list_area">
+              <h3>low fat pinut oil</h3>
+              <p> <i>300</i> 200</p>
+              <button class="list_button">Buy now</button>
+            </div>
+
+
+
+          </div>
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <img src="{{url_for('static',filename='/img/photo-1567620905732-2d1ec7ab7445.jpg')}}">
+              </div>
+            </div>
+            <div class="list_area">
+              <h3>low fat pinut oil</h3>
+              <p> <i>300</i> 200</p>
+              <button class="list_button">Buy now</button>
+            </div>
+
+
+
+          </div>
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <img src="{{url_for('static',filename='/img/top-view-pakistan-meal-composition-with-copy-space.jpg')}}">
+              </div>
+            </div>
+            <div class="list_area">
+              <h3>low fat pinut oil</h3>
+              <p> <i>300</i> 200</p>
+              <button class="list_button">Buy now</button>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="list_innercontainer">
+
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <img src="{{url_for('static',filename='/img/images.jpg')}}">
+              </div>
+            </div>
+            <div class="list_area">
+              <h3>low fat pinut oil</h3>
+              <p> <i>300</i> 200</p>
+              <button class="list_button">Buy now</button>
+            </div>
+
+
+
+          </div>
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <img src="{{url_for('static',filename='/img/download.jpg')}}">
+              </div>
+            </div>
+            <div class="list_area">
+              <h3>low fat pinut oil</h3>
+              <p> <i>300</i> 200</p>
+              <button class="list_button">Buy now</button>
+            </div>
+
+
+
+          </div>
+          <div class="card">
+            <div class="face face1">
+              <div class="content">
+                <img src="{{url_for('static',filename='/img/download.jpg')}}">
+              </div>
+            </div>
+            <div class="list_area">
+              <h3>low fat pinut oil</h3>
+              <p> <i>300</i> 200</p>
+              <button class="list_button">Buy now</button>
+            </div>
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="footer">
+
+
+    <div class="box-container">
+
+      <div class="box">
+        <h3 style="margin-left: -90px;"><span class="header-name">Food</span> Delivery</h3>
+        <p>Thank you for visiting my personal Food Delivery website. <br>
+          Connect with me over socials.  </p>
+
+      </div>
+
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="#home"><i class="fas fa-chevron-circle-right"></i> menu</a>
+        <a href="#about"><i class="fas fa-chevron-circle-right"></i> categure</a>
+        <a href="#education"><i class="fas fa-chevron-circle-right"></i> shop</a>
+        <a href="#skills"><i class="fas fa-chevron-circle-right"></i> blog</a>
+
+      </div>
+
+      <div class="box">
+        <h3>contact info</h3>
+        <p> <i class="fas fa-phone"></i>+91-9456954582</p>
+        <p> <i class="fas fa-envelope"></i>a9756549615@gmail.com</p>
+        <p> <i class="fas fa-map-marked-alt"></i>muzaffarnagar,india 251001</p>
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+{%endblock%}
+</body>
+
+</html>
